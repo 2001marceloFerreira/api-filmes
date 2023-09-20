@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: api-filmes-series-free
+  profiles:
+    active: ${ENV_PROFILE:local}
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/filmes_series}
+    driver-class-name: org.postgresql.Driver
+    username: ${DATABASE_USER_NAME:root}
+    password: ${DATABASE_USER_PASSWORD:root}
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+springdoc:
+  swagger-ui:
+    enabled: true
+    operationsSorter: ['POST','PUT','GET','DELETE']
