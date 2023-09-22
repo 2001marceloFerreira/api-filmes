@@ -37,5 +37,7 @@ public class FilmeService {
 
         return filmeRepository.save(filme);
     }
-
+    public Filme PersistirFilme(Filme filme) {
+        return filmeRepository.saveAndFlush(filme);
+    }
 }
